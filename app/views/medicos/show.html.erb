@@ -1,6 +1,22 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @medico %>
+<h2>Consultas</h2>
+<% @medico.consultums.each do |consultum| %>
+  <p>
+    <strong>Paciente:</strong>
+    <%= consultum.paciente.nome %>
+  </p>
+  <p>
+    <strong>Horario:</strong>
+    <%= consultum.horario %>
+  </p>
+  <p>
+  <strong>Data:</strong>
+  <%= consultum.data %>
+  </p>
+  ______________________
+<% end %>
 
 <div>
   <%= link_to "Edit this medico", edit_medico_path(@medico) %> |

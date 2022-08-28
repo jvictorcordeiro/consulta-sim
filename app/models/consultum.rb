@@ -4,6 +4,8 @@ class Consultum < ApplicationRecord
 
   validate :data_valida
   validate :horario_valido
+  # validates :paciente, presence: true
+  # validates :medico, presence: true
 
   def data_valida
     if data.present? && data < Date.today

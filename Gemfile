@@ -72,3 +72,5 @@ group :test do
 end
 
 gem "cpf_cnpj"
+gem "ffi"
+gem "rspec"

@@ -18,3 +18,7 @@ end
 Then('vejo que cadastro do medico foi efetuado com sucesso') do
   expect(page).to have_current_path(medicos_path + '/' + Medico.last.id.to_s)
 end
+
+Then('vejo a mensagem cpf invalido') do
+  expect(page).to have_content('Cpf formato ou numero invalido')
+end
